@@ -21,16 +21,24 @@ body{
     justify-content: center;
     align-items: center;
 }
+.cubo{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .circulo{
-   /* background-color: rgba(245, 222, 179,99%);*/
+   /*background-color: rgba(245, 222, 179,99%);*/
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25em;
+    font-size: 0em;
 }
+
 #fotoPerfil{
     background-image: url(fotoPerfil.jpeg);
     background-attachment:local;
@@ -38,49 +46,122 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     filter: contrast(100%);display: flex;
+    animation: aniFotoPerfil 6s 1s linear forwards;
+    display: flex;
     position: fixed;
-    animation: correrFoto 6s 1s linear forwards;
 }
 
 #bienvenida{
-    display: flex;
-    position: absolute;
-    animation: aniBienvenida 7s linear forwards;*/
-}
-@keyframes aniBienvenida{
-    0%{
-        transform: scale(0);
-    }
-    50%{
-        transform: scale(0);
-    }
-    100%{
-        color: black;
-        background: white;
-        transform: scale(1);
-    }
-    
+    animation: aniBienvenida 7s linear forwards;
 }
 
+
 #infoPersonal{
-    display: none;
-    position: absolute;
+    display:flex;
+    position: fixed;
+    color: black;
+    background: rgb(255, 255, 255,50%);
+    animation: aniInfoPersonal 9s linear forwards;
+}
+
+#infoPersonal:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }
 #conocimientos{
-    display: none;
-    position: absolute;
-    
+    display:flex;
+    position: fixed;
+    color: black;
+    background: rgb(255, 255, 255,50%);
+    animation: aniConocimiento 9s linear forwards;
+}
+#conocimientos:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }
 #masSobreMi{
-    display: none;
-    position: absolute;
+    display:flex;
+    position: fixed;
+    color: black;
+    background: rgb(255, 255, 255,50%);
+    animation: aniMasSobreMi 9s linear forwards;
+}
+#masSobreMi:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }
 #repositorio{
-    display: none;
-    position: absolute;
+    display:flex;
+    position: fixed;
+    color: black;
+    background: rgb(255, 255, 255,50%);
+    animation: aniRepositorio 9s linear forwards;
 }
-    
-@keyframes correrFoto {
+#repositorio:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+@keyframes aniInfoPersonal{
+    0%{
+        font-size: 0em;
+        transform: translate(0px,0px) scale(0);
+    }
+    50%{
+        transform: translate(0px,0px) scale(0);
+    }
+    100%{
+        font-size: 1em;
+        transform: translate(150px, 0px)  scale(1);
+    }
+}
+@keyframes aniConocimiento{
+    0%{
+        font-size: 0em;
+        transform: translate(0px,0px) scale(0);
+    }
+    50%{
+        transform: translate(0px,0px) scale(0);
+    }
+    100%{
+        font-size: 1em;
+        transform: translate(-150px, 0px)  scale(1);
+    }
+}
+
+@keyframes aniMasSobreMi{
+    0%{
+        font-size: 0em;
+        transform: translate(0px,0px) scale(0);
+    }
+    50%{
+        transform: translate(0px,0px) scale(0);
+    }
+    100%{
+        font-size: 1em;
+        transform: translate(0px, 150px)  scale(1);
+    }
+}
+
+@keyframes aniRepositorio{
+    0%{
+        font-size: 0em;
+        transform: translate(0px,0px) scale(0);
+    }
+    50%{
+        transform: translate(0px,0px) scale(0);
+    }
+    100%{
+        font-size: 1em;
+        transform: translate(0px,-150px)  scale(1);
+    }
+}
+
+@keyframes aniFotoPerfil {
     0%{
         transform: scale(1);
     }
@@ -111,6 +192,22 @@ body{
     
 }
 
+
+@keyframes aniBienvenida{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        font-size: 1.25em;
+        color: black;
+        background: white;
+        transform: scale(1);
+    }
+    
+}
 /*
 
 animation-duration: el tiempo en el cual se ejecuta cada ciclo de la animación
